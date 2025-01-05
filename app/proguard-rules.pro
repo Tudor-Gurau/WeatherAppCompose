@@ -33,7 +33,7 @@
 #-keep class com.google.gson.stream.** { *; }
 
 # Application classes that will be serialized/deserialized over Gson
--keep class com.nick.samplecomposewithhiltandroom.data.room_database.ships.** { <fields>; }
+-keep class com.tudor.weatherappcompose.data.room_database.ships.** { <fields>; }
 
 # Prevent proguard from stripping interface information from TypeAdapter, TypeAdapterFactory,
 # JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
@@ -113,7 +113,7 @@
 -dontwarn org.openjsse.net.ssl.OpenJSSE
 
 # Extra Proguard Rules
--keep class com.nick.samplecomposewithhiltandroom.utils.ship_service.** { *; }
+-keep class com.tudor.weatherappcompose.util.ship_service.** { *; }
 -keep class kotlin.coroutines.Continuation
 
 -dontwarn org.conscrypt.ConscryptHostnameVerifier

@@ -1,19 +1,19 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
     id("com.google.devtools.ksp")
     id("dagger.hilt.android.plugin")
     id("org.jetbrains.kotlin.plugin.compose") version "2.0.21"
+    id("kotlin-kapt")
 }
 
 android {
     compileSdk = 35
     buildToolsVersion = "35.0.0"
-    namespace = "com.nick.samplecomposewithhiltandroom"
+    namespace = "com.tudor.weatherappcompose"
 
     defaultConfig {
-        applicationId = "com.nick.samplecomposewithhiltandroom"
+        applicationId = "com.tudor.weatherappcompose"
         minSdk = 28
         targetSdk = 35
         versionCode = 1
@@ -83,7 +83,7 @@ val composeVersion by extra("1.7.5")
 val composeFoundationVersion by extra("1.7.5")
 val composeMaterialVersion by extra("1.7.5")
 val composeMaterial3Version by extra("1.3.1")
-val composeNavigationVersion by extra("2.8.3")
+val composeNavigationVersion by extra("2.8.4")
 val composeHiltNavigationVersion by extra("1.2.0")
 
 dependencies {
@@ -95,6 +95,7 @@ dependencies {
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshLayoutVersion")
     //View Model KTX and LiveData and Live Cycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
+    implementation("androidx.palette:palette-ktx:1.0.0")
     //noinspection LifecycleAnnotationProcessorWithJava8
     kapt("androidx.lifecycle:lifecycle-compiler:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
@@ -112,6 +113,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
     implementation("com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion")
     //Coil load Image
+    implementation ("io.coil-kt:coil:$coilVersion")
     implementation("io.coil-kt:coil-compose:$coilVersion")
     //Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion")
