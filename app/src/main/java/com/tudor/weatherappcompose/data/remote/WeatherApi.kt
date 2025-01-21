@@ -1,6 +1,6 @@
 package com.tudor.weatherappcompose.data.remote
 
-import com.tudor.weatherappcompose.data.remote.responses.WeatherForecast
+import com.tudor.weatherappcompose.data.remote.responses.WeatherForecastResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -10,5 +10,5 @@ interface WeatherApi {
     suspend fun getWeatherForecast(
         @Path("location") location : String,
         @Query("key") apiKey: String,
-    ) : WeatherForecast
+    ) : WeatherForecastResponse
 }

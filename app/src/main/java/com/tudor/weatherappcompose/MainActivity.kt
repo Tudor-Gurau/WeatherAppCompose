@@ -3,14 +3,15 @@ package com.tudor.weatherappcompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.tudor.weatherappcompose.ui.theme.WeatherForecastTheme
-import com.tudor.weatherappcompose.weatherforecastdashboard.WeatherForecastDashboard
-import dagger.hilt.android.AndroidEntryPoint
+import com.tudor.weatherappcompose.presentation.ui.theme.WeatherForecastTheme
+import com.tudor.weatherappcompose.presentation.util.Screen
+import com.tudor.weatherappcompose.presentation.weather_forecast_dashboard.WeatherForecastDashboard
+import com.tudor.weatherappcompose.presentation.weather_forecast_search_location.WeatherForecastSearchLocation
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,10 +20,13 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 NavHost(
                     navController = navController,
-                    startDestination = "weather_forecast_dashboard"
+                    startDestination = Screen.WeatherForecastDashboard.route
                 ) {
-                    composable("weather_forecast_dashboard") {
-                        WeatherForecastDashboard()
+                    composable(route = Screen.WeatherForecastDashboard.route) {
+                        WeatherForecastDashboard(navController = navController)
+                    }
+                    composable(route = Screen.WeatherForecastSearchLocation.route) {
+                        WeatherForecastSearchLocation(navController = navController)
                     }
                 }
             }

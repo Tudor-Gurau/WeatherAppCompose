@@ -3,7 +3,7 @@ package com.tudor.weatherappcompose.data.remote.responses
 
 import com.google.gson.annotations.SerializedName
 
-data class WeatherForecast(
+data class WeatherForecastResponse(
     @SerializedName("address")
     val address: String,
     @SerializedName("alerts")

@@ -1,4 +1,4 @@
-package com.tudor.weatherappcompose.ui.theme
+package com.tudor.weatherappcompose.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

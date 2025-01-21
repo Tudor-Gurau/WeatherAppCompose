@@ -124,6 +124,9 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     ksp("com.google.dagger:hilt-compiler:$hiltVersion")
     ksp("androidx.hilt:hilt-compiler:$hiltCompilerVersion")
+    //Koin
+    implementation("io.insert-koin:koin-android:3.2.0")
+    implementation("io.insert-koin:koin-androidx-compose:3.2.0")
     //Multidex
     implementation("androidx.multidex:multidex:$multidexVersion")
     //Compose

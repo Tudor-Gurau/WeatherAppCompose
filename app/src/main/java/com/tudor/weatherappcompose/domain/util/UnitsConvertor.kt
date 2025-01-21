@@ -1,4 +1,4 @@
-package com.tudor.weatherappcompose.util
+package com.tudor.weatherappcompose.domain.util
 
 
 //TEMP CONVERTOR C = (°F - 32) × 5/9
